@@ -1,0 +1,100 @@
+
+
+body,
+html{
+  height: 100%;
+  ::-webkit-scrollbar { width: 8px; height: 8px;} //ширина и высота скролла
+  ::-webkit-scrollbar-track-piece { background-color: #fff;}//цвет полосы
+  ::-webkit-scrollbar-thumb { height: 50px; background-color: $accent; border-radius: 0;}/* ползунок скроллбара */
+}
+.body-active{
+  overflow: hidden;
+}
+body{
+  background-color: $bg;
+  color: $default;
+  @extend %roboto-400;
+  font-size: 16px;
+  line-height: 30px;
+  position: relative;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.main{
+  flex-grow: 1;
+  transition: all .3s linear;
+  &--active{
+    transform: translateX(60%);
+  }
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title{
+  color: $white;
+  @extend %oswald-500;
+  font-size: 40px;
+  line-height: 52px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.box-title{
+  z-index: 1;
+  position: relative;
+}
+.subtitle{
+  @extend %oswald-600;
+  font-size: 100px;
+  line-height: 120px;
+  color: $opacity;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: -1;
+}
+
+@media (max-width:1680px){
+  .subtitle{
+    font-size: 77px;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 576px){
+  .subtitle {
+    font-size: 65px;
+    line-height: 90px;
+  }
+  .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 385px){
+  .title {
+    font-size: 27px;
+    line-height: 40px;
+  }
+  .subtitle {
+    font-size: 50px;
+    line-height: 110%;
+  }
+}
+
+@media (max-width: 360px){
+  .title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+}

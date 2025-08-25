@@ -1,0 +1,70 @@
+
+$accent: #EB1616;
+$default: #BBBBBB;
+$white: #fff;
+$opacity: #2C2C2C;
+$bg:#202020;
+
+
+
+%btn{
+  @extend %oswald-500;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: $accent;
+  padding: 14px 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  transition: all .3s linear;
+  &:hover{
+    background-color: rgb(180, 0, 0);
+  }
+}
+
+
+%oswald-600{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+%oswald-500{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+%roboto-400{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%roboto-500{
+  font-family: 'Roboto' , sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width:992px){
+  %btn{
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width:576px){
+  %btn{
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  %btn{
+    padding: 8px 12px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
